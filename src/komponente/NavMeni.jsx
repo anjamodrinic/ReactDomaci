@@ -1,9 +1,10 @@
 import React from "react";
 import { BiLaptop } from "react-icons/bi";
-import { MdHeadphones } from "react-icons/md";
-import { BsCart4 } from "react-icons/bs";
 
-const NavMeni = () => {
+import { BsCart4 } from "react-icons/bs";
+import { Link } from "react-router-dom";
+
+const NavMeni = ({ cartNum }) => {
   return (
     <nav
       className="navbar navbar-expand-lg navbar-light shadow stick-top"
@@ -12,15 +13,15 @@ const NavMeni = () => {
       }}
     >
       <div className="container-fluid">
-        <a
+      <Link
           className="navbar-brand"
           style={{
             fontStyle: "italic",
           }}
-          href="#"
+          to="/"
         >
-          Laptop računari i oprema
-        </a>
+          Skije
+          </Link>
         <button
           className="navbar-toggler"
           type="button"
@@ -70,31 +71,13 @@ const NavMeni = () => {
                 aria-labelledby="navbarDropdown"
               >
                 <li>
-                  <a
+                  <Link
                     className="dropdown-item"
                     href="#"
                   >
                     <BiLaptop />
                     Laptopovi
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="dropdown-item"
-                    href="#"
-                  ></a>
-                </li>
-                <li>
-                  <hr className="dropdown-divider" />
-                </li>
-                <li>
-                  <a
-                    className="dropdown-item"
-                    href="#"
-                  >
-                    <MdHeadphones />
-                    Oprema
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </li>
