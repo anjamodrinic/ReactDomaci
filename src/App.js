@@ -1,5 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
+import "./App.css";
+import skije from "./komponente/skije";
+import NavMeni from "./komponente/NavMeni.jsx";
 
 function App() {
   return (
@@ -18,8 +21,8 @@ function App() {
           Learn React
         </a>
       </header>
+      <NavMeni />
+      <skije />
     </div>
   );
 }
-
-export default App;
