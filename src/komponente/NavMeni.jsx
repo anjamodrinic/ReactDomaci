@@ -4,7 +4,11 @@ import { BiLaptop } from "react-icons/bi";
 import { BsCart4 } from "react-icons/bs";
 import { Link } from "react-router-dom";
 
-const NavMeni = ({ cartNum }) => {
+const NavMeni = ({
+    cartNum,
+    setInput,
+    setSort,
+  }) => {
   return (
     <nav
       className="navbar navbar-expand-lg navbar-light shadow stick-top"
@@ -30,6 +34,9 @@ const NavMeni = ({ cartNum }) => {
           aria-controls="navbarSupportedContent"
           aria-expanded="false"
           aria-label="Toggle navigation"
+          onChange={(e) =>
+            setInput(e.target.value)
+          }
         >
           <span className="navbar-toggler-icon"></span>
         </button>
